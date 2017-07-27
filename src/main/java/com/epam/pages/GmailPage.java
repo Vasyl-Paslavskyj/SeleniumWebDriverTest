@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 public class GmailPage extends PageObject{
-
+    
     @FindBy(className="T-Jo-auh")
     private List<Checkbox> messagesCheckboxes;
 
@@ -62,9 +62,7 @@ public class GmailPage extends PageObject{
                         By.xpath("//*[@id=\"link_undo\"]")));
         cancelDeleteSpan.click();
     }
-
     public String verificationThatMessagesWereNotDeleted(){//+
         return confirmationCancelDeleteSpan.getText();
     }
-
 }
